@@ -1,0 +1,190 @@
+/* =====================
+   Theme Variables
+===================== */
+
+/* Light Theme */
+:root {
+  --bg: #f3f6ef;                /* Brighter background */
+  --text: #121e13;              /* Nearly black for strong readability */
+  --accent: #2f6f3e;            /* Deeper, bolder green */
+  --accent-dark: #204d2b;       /* Even darker green for headers/buttons */
+  --border: #9bb89b;            /* Stronger contrast border */
+  --white: #ffffff;
+}
+
+/* Dark Theme */
+.dark-mode {
+  --bg: #121512;
+  --text: #f0f6ef;
+  --accent: #9be29b;
+  --accent-dark: #77c977;
+  --border: #333;
+  --white: #1e211d;
+}
+
+/* =====================
+   Base Styles
+===================== */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* =====================
+   Header
+===================== */
+header {
+  background-color: var(--white);
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  color: var(--accent-dark);
+}
+
+/* Navigation */
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--accent-dark);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* =====================
+   Toggle Button
+===================== */
+#theme-toggle {
+  background: none;
+  border: 2px solid var(--accent);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--accent-dark);
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+#theme-toggle:hover {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+/* =====================
+   Main Layout
+===================== */
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-dark);
+}
+
+p, li {
+  line-height: 1.4;
+  color: var(--text);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+/* =====================
+   Forms
+===================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 2px solid var(--accent-dark);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--white);
+  color: var(--text);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+}
+
+/* =====================
+   Buttons
+===================== */
+button {
+  align-self: start;
+  background-color: var(--accent-dark);
+  color: var(--white);
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--accent);
+}
+
+/* =====================
+   Footer
+===================== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  background-color: var(--white);
+  border-top: 2px solid var(--border);
+}
+
+.logo-container {
+  float:left;
+}
+
+.logo-container img {
+  width: 120px;
+  height: auto;
+}
